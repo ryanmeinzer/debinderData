@@ -14,8 +14,10 @@ function transformData(data) {
         tempObj.name = key[0]
         tempObj.books = [key[1]]
         tempObj.isbn = Object.keys(data)[count]
-        tempObj.text = [key[2]]
-        // console.log([key[2]])
+        tempObj.text = []
+        for (i = 2; i < key.length; i++) {
+            tempObj.text.push(key[i])
+        }
         newArr.push(tempObj)
         count++
     })
