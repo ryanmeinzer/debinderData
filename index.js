@@ -9,14 +9,14 @@ function transformData(data) {
 
     Object.values(data).forEach(function (key) {
 
-        let tempObj = { name: '', books: [], isbn: 1234567891234, text: [] }
+        let tempObj = { name: '', books: [{ title: '', isbn: 1234567891234, text: [] }] }
 
         tempObj.name = key[0]
-        tempObj.books = [key[1]]
-        tempObj.isbn = Object.keys(data)[count]
-        tempObj.text = []
+        tempObj.books.title = [key[1]]
+        tempObj.books.isbn = Object.keys(data)[count]
+        tempObj.books.text = []
         for (i = 2; i < key.length; i++) {
-            tempObj.text.push(key[i])
+            tempObj.books.text.push(key[i])
         }
         newArr.push(tempObj)
         count++
