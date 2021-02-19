@@ -8,7 +8,8 @@ function transformData(data) {
         let tempObj = { name: '', books: [], isbn: 1234567891234, text: [] }
 
         tempObj.name = key[0]
-        console.log(tempObj.name)
+        tempObj.books = [key[1]]
+        // console.log(key[1])
         newArr.push(tempObj)
 
         // let newObj = {}
