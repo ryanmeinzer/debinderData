@@ -2,15 +2,17 @@ const data = require('./data.json')
 
 function transformData(data) {
 
-    console.log(Object.keys(data))
+    let newArr = []
 
-    // let obj = {}
-    // for (let el in data) {
+    Object.values(data).forEach(function (key) {
+        // console.log(key[0])
+        let newObj = {}
+        newObj[key[0]] = true
+        newArr.push(newObj)
+    })
 
-    // }
-
-
-    // console.log(data)
+    console.log(newArr)
+   
 }
 
 transformData(data)
