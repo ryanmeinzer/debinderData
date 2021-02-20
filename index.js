@@ -10,7 +10,6 @@ function transformData(data) {
         let tempObj = { name: '', books: [{ title: '', isbn: 1234567891234, text: [] }] }
 
         tempObj.name = key[0]
-        console.log(tempObj.books[0].title)
         tempObj.books[0].title = [key[1]]
         tempObj.books[0].isbn = Object.keys(data)[count]
         tempObj.books[0].text = []
